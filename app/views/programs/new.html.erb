@@ -1,0 +1,11 @@
+<h2>Create a New Program</h2>
+<%= render partial: '/errors', locals: { record: @program } %>
+
+
+
+
+<%= form_for @program do |p| %>
+    <%= p.label :name %>
+    <%= p.text_field :name %>
+    <%= p.submit "Submit" %>
+<% end %>
