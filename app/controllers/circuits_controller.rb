@@ -1,10 +1,10 @@
 class CircuitsController < ApplicationController 
     def index 
-        circuits = Circuit.all 
+        @program = Program.find_by(id:params[:program_id])
     end 
 
     def new 
-        
+
     end 
      
     def create 
