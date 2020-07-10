@@ -1,0 +1,21 @@
+<h2> Add a new circuit to <%= @program.name %></h2>
+
+<%= render partial: '/errors', locals: { record: @circuit } %>
+
+<%= form_for @circuit do |f| %>
+    <ul>
+    <li><%= f.label "add an exercise to circuit" %></li>
+
+    <%= f.collection_check_boxes :exercise_ids, Exercise.all, :id, :name %>
+   
+    
+    <li><%= f.label :Name %></li>
+    <%= f.text_field :name %>
+    <li><%= f.label "Day of week performed" %></li>
+    <%= f.select :day, ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'], prompt: true %>
+    <%= f.hidden_field :program_id, value: @program.id %></br></br>
+    <%= f.submit %>
+    </ul>
+<% end %>
+
+   

@@ -1,11 +1,11 @@
 class Circuit < ApplicationRecord
-    has_many :exercises
-    # has_many :excercises, through: :circuitexcercises
+    has_many :circuit_exercises
+    has_many :exercises, through: :circuit_exercises
     belongs_to :program
-
-    def total_weight 
-        self.exercises.sum do |excercise| 
-            excercise.weight 
-        end 
-    end 
+    validates_presence_of :name
 end
+
+# def total_weight 
+#     self.exercises.sum do |exercise| 
+#         exercise.weight 
+#     end 

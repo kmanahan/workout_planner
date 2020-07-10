@@ -83,3 +83,9 @@ name, muscles, sets, reps, weight_amnt, description
 
 #program show page will have create new circuit
 circuit show page will have add new exercise => search form 
+
+    <h2> Add a new circuit to <%= @program.name %></h2>
+
+
+    # <%= f.collection_select :what the name of attribute is in params hash (:exercise_id), :what the collection actually is (Exercise.all), value that is going to be submitted (:id), what the display is going to be(:name), %>
+    

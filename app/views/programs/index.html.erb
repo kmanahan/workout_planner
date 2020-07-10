@@ -1,6 +1,6 @@
 <h2>Programs</h2>
 
-<%= link_to "Create New Program", programs_path %>
+<%= link_to "Create New Program", new_program_path %>
 
 <% @programs.each do |program| %>
     <h3><%= link_to program.name,  program_circuits_path(program) %></h3>
