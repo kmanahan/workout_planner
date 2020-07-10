@@ -4,7 +4,9 @@ class CircuitsController < ApplicationController
     end 
 
     def show 
-        @program = Program.find_by(id: params[:circuit][:program_id])
+        #refactor?
+        @circuit = Circuit.find_by(params[:id])
+
     end 
    
     def new 
