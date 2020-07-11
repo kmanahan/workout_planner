@@ -5,8 +5,7 @@ class CircuitsController < ApplicationController
 
     def show 
         #refactor?
-        @circuit = Circuit.find_by(params[:id])
-
+        @circuit = Circuit.find(params[:id])
     end 
    
     def new 
@@ -32,6 +31,6 @@ class CircuitsController < ApplicationController
     end  
 
     def circuit_params 
-        params.require(:circuit).permit(:exercise_id, :name, :day, :program_id)
+        params.require(:circuit).permit(:exercise_ids, :name, :day, :program_id)
     end 
 end 

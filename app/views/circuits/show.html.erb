@@ -1,2 +1,7 @@
 #include total_weight and lbs_to_kg methods
 <h3><%= @circuit.name %></h3>
+
+
+<% @circuit.exercises.each do |exercise| %>
+    <h3><%= exercise.name %></h3>
+<% end %>

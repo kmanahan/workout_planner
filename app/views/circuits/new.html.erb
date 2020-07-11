@@ -6,9 +6,11 @@
     <ul>
     <li><%= f.label "add an exercise to circuit" %></li>
 
-    <%= f.collection_check_boxes :exercise_ids, Exercise.all, :id, :name %>
-   
-    
+    <%= f.collection_select :exercise_ids, Exercise.all, :id, :name %><br>
+    <%= f.collection_select :exercise_ids, Exercise.all, :id, :name %><br>
+    <%= f.collection_select :exercise_ids, Exercise.all, :id, :name %><br>
+    <%= f.collection_select :exercise_ids, Exercise.all, :id, :name %><br>
+
     <li><%= f.label :Name %></li>
     <%= f.text_field :name %>
     <li><%= f.label "Day of week performed" %></li>
